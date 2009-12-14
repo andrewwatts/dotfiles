@@ -11,9 +11,10 @@ alias whatismyip='echo `curl -s http://whatismyip.org/`'
 
 
 # --------------------------------------------------------------------------
-# AMAZON S3 & EC2
+# AMAZON S3 and EC2
 # --------------------------------------------------------------------------
-alias s3='$HOME/bin/s3cmd.rb'
+test -r "$HOME/amazon/s3/s3sync/s3sync.rb" && 
+     alias s3='$HOME/amazon/s3/s3sync/s3cmd.rb'
 
 
 # --------------------------------------------------------------------------
@@ -32,8 +33,9 @@ if [ "$UNAME" = Darwin ]; then
     alias eclipse='$HOME/dev/eclipse/home/current/Eclipse.app/Contents/MacOS/eclipse &> /dev/null'
     
     # MYSQL
-    alias mysqlstart='sudo launchctl start com.mysql.mysqld'
-    alias mysqlstop='sudo launchctl stop com.mysql.mysqld'
+    test -r "/Library/LaunchDaemons/com.mysql.mysqld.plist" &&
+        alias mysqlstart='sudo launchctl start com.mysql.mysqld' &&
+        alias mysqlstop='sudo launchctl stop com.mysql.mysqld'
     
     # TERMINAL COLORS
     alias blue='SetTerminalStyle Ocean'
@@ -45,6 +47,5 @@ if [ "$UNAME" = Darwin ]; then
     
     # UTILITIES
     alias bringalltofront='osascript $HOME/bin/bring-all-to-front'
-
 fi
 
