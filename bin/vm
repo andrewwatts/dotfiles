@@ -1,0 +1,28 @@
+# ~/bin/vm
+#
+# Shortcut to VMWare tools for starting and stopping headless VMs
+# (I got tired of opening the VMWare Fusion application every time)
+ 
+# TODO:
+# * Show running VMs and enable stopping
+# * Check VMWare exists and exit if it doesn't (cross-platform)
+ 
+VM_DIR="${HOME}/Documents/Virtual Machines.localized"
+START_VM="/Library/Application Support/VMware Fusion/vmrun"
+VMS=`find "${VM_DIR}" -name "*.vmwarevm" | grep -v 'Win'`
+ 
+# path separators so I can use spaces in filenames
+OLD_IFS=${IFS}; IFS="
+"
+ 
+echo "Choose a non-Windows VM to start:"
+select opt in $VMS ; do
+    # run file
+    `"${START_VM}" start "${opt}" nogui`
+    # repair IFS
+    IFS=${OLD_IFS}
+    exit 0
+done
+ 
+IFS=${OLD_IFS}
+exit 1

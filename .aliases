@@ -1,0 +1,50 @@
+
+# --------------------------------------------------------------------------
+# general aliases
+# --------------------------------------------------------------------------
+alias bashrc='vi ~/.bashrc'
+alias ipython='ipython -automagic -nobanner'
+alias ls='ls -aFG'
+alias mkdir='mkdir -p'
+alias sourc='. ~/.bash_profile'
+alias whatismyip='echo `curl -s http://whatismyip.org/`'
+
+
+# --------------------------------------------------------------------------
+# AMAZON S3 & EC2
+# --------------------------------------------------------------------------
+alias s3='$HOME/bin/s3cmd.rb'
+
+
+# --------------------------------------------------------------------------
+# GIT
+# --------------------------------------------------------------------------
+alias gb='git branch -a'
+alias gba='git branch -a -v'
+
+
+# --------------------------------------------------------------------------
+# OSX
+# --------------------------------------------------------------------------
+if [ "$UNAME" = Darwin ]; then
+    
+    # JAVA
+    alias eclipse='$HOME/dev/eclipse/home/current/Eclipse.app/Contents/MacOS/eclipse &> /dev/null'
+    
+    # MYSQL
+    alias mysqlstart='sudo launchctl start com.mysql.mysqld'
+    alias mysqlstop='sudo launchctl stop com.mysql.mysqld'
+    
+    # TERMINAL COLORS
+    alias blue='SetTerminalStyle Ocean'
+    alias black='SetTerminalStyle black'
+    alias red='SetTerminalStyle Red\ Sands'
+    alias green='SetTerminalStyle green'
+    alias white='SetTerminalStyle Basic'
+    alias default='SetTerminalStyle Default'
+    
+    # UTILITIES
+    alias bringalltofront='osascript $HOME/bin/bring-all-to-front'
+
+fi
+

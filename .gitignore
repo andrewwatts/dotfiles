@@ -1,5 +1,8 @@
 
 .DS_Store
+.mysql_history
+.bash_history
+.sh_history
 .viminfo
 .virtualenvs
 

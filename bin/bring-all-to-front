@@ -1,0 +1,16 @@
+tell application "Terminal"
+    activate
+end tell
+
+tell application "System Events"
+    tell process "Terminal"
+        tell menu bar 1
+            tell menu bar item "Window"
+                tell menu "Window"
+                    click menu item "Bring All to Front"
+                end tell
+            end tell
+        end tell
+    end tell
+end tell
+
