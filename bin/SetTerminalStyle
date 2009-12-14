@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+/usr/bin/osascript $0.applescript `/usr/bin/tty` $1
