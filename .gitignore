@@ -1,8 +1,11 @@
 
 .DS_Store
+.irb_history
+.lesshst
 .mysql_history
 .bash_history
 .sh_history
+.sqlite_history
 .viminfo
 .virtualenvs
 
