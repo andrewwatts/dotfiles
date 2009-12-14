@@ -1,0 +1,32 @@
+[user]
+	name = Andrew Watts
+	email = andrewwatts@gmail.com
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    pager = true
+
+[alias]
+    a = add
+    ap = add -p
+    ci = commit --verbose
+    co = checkout
+    commit = commit --verbose
+    d = diff
+    ds = diff --stat
+    l = log --abbrev-commit --pretty=oneline
+    lf = log --abbrev-commit --pretty=oneline --name-only
+    ll = log --abbrev-commit --pretty=oneline --max-count=20
+    raw = show --pretty=raw 
+    st = status
+
+[apply]
+	whitespace = nowarn
+
+[diff]
+#    external = "/Users/andrew/dev/shell/git-diff-driver.sh"
+
