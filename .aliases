@@ -4,7 +4,9 @@
 # --------------------------------------------------------------------------
 alias bashrc='vi ~/.bashrc'
 alias ipython='ipython -automagic -nobanner'
-alias ls='ls -aFG'
+alias l.="ls -d .*"
+alias ll="ls -l"
+alias ll.="ls -ld .*"
 alias mkdir='mkdir -p'
 alias sourc='. ~/.bash_profile'
 alias whatismyip='echo `curl -s http://whatismyip.org/`'

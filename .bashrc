@@ -1,5 +1,13 @@
 #!/bin/bash
 
+
+# -------------------------------------------------------------------------
+# This is my .bashrc, a lot of the format and ideas were borrowed from
+# http://github.com/rtomayko/dotfiles/blob/rtomayko/.bashrc.  Although, 
+# I have heavily customized for my environment.
+# -------------------------------------------------------------------------
+
+
 # -------------------------------------------------------------------------
 # SHELL VARIABLES
 # -------------------------------------------------------------------------
@@ -22,17 +30,14 @@ set -o notify
 # default umask
 umask 0022
 
-# bring in aliases
-test -r "$HOME/.aliases" && . $HOME/.aliases
-
 
 # -------------------------------------------------------------------------
 # PATH & MANPATH
 # -------------------------------------------------------------------------
 
 # critical macports paths
-test -d "/opt/local/bin" && PATH="$PATH:/opt/local/bin"
-test -d "/opt/local/bin" && PATH="$PATH:/opt/local/sbin"
+test -d "/opt/local/bin" && PATH="/opt/local/bin:$PATH"
+test -d "/opt/local/sbin" && PATH="/opt/local/sbin:$PATH"
 test -d "/opt/local/share/man" && MANPATH="/opt/local/share/man:$MANPATH"
 
 # include our custom scripts
@@ -85,10 +90,35 @@ else
 fi
 export PAGER MANPAGER
 
+# -------------------------------------------------------------------------
+# LS AND DIRCOLORS (from http://github.com/rtomayko/dotfiles/)
+# -------------------------------------------------------------------------
+
+# we always pass these to ls(1)
+LS_COMMON="--color=auto -hBG"
+ 
+# if the dircolors utility is available, set that up to
+dircolors="$(type -P gdircolors dircolors | head -1)"
+test -n "$dircolors" && {
+    COLORS=/etc/DIR_COLORS
+    test -e "/etc/DIR_COLORS.$TERM"   && COLORS="/etc/DIR_COLORS.$TERM"
+    test -e "$HOME/.dircolors"        && COLORS="$HOME/.dircolors"
+    test ! -e "$COLORS"               && COLORS=
+    eval `$dircolors --sh $COLORS`
+}
+unset dircolors
+ 
+# setup the main ls alias if we've established common args
+test -n "$LS_COMMON" &&
+    alias ls="command ls $LS_COMMON"
+ 
 
 # -------------------------------------------------------------------------
-# CUSTOM FUNCTIONS
+# CUSTOM ALIASES FUNCTIONS
 # -------------------------------------------------------------------------
+
+# bring in aliases
+test -r "$HOME/.aliases" && . $HOME/.aliases
 
 # go into our dev environment
 function dev {
@@ -112,6 +142,7 @@ function parse_git_branch {
 PS1="\u@\h:\W \$(parse_git_branch)$ "
 
 # distribute ssh keys
+# from http://github.com/rtomayko/dotfiles/.bashrc
 push_ssh_cert(){
     local _host
     test -f ~/.ssh/id_dsa.pub || ssh-keygen -t dsa
