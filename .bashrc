@@ -153,6 +153,21 @@ push_ssh_cert(){
     done
 }
 
+# OSX specific functions
+if [ "$UNAME" = Darwin ]; then
+    
+    # change the color of our ssh'd terminal
+    test -r "$HOME/bin/SetTerminalStyle" && {
+        function ssh {
+            $HOME/bin/SetTerminalStyle ssh
+            /usr/bin/ssh "$@"
+            $HOME/bin/SetTerminalStyle default 
+        }
+    }
+    
+fi
+
+
 
 # -------------------------------------------------------------------------
 # bring in other dev environments
