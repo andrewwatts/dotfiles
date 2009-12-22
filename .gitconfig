@@ -23,6 +23,7 @@
     ll = log --abbrev-commit --pretty=oneline --max-count=20
     raw = show --pretty=raw 
     st = status
+    ww = log --pretty=format:'%h %ad %s' --date=local
 
 [apply]
 	whitespace = nowarn
