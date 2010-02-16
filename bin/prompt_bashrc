@@ -1,0 +1,60 @@
+
+# -------------------------------------------------------------------------
+# FUNCTIONS FOR A GIT PROMPT
+# -------------------------------------------------------------------------
+
+GIT_PROMPT_PREFIX="("
+GIT_PROMPT_SUFFIX=")"
+GIT_PROMPT_DIRTY="!"
+GIT_PROMPT_CLEAN=""
+
+# get the name of the branch we are on
+function git_prompt_info() {
+    ref=$(git symbolic-ref HEAD 2> /dev/null | cut -d/ -f3) || return
+    echo "$GIT_PROMPT_PREFIX$ref$(parse_git_dirty)$GIT_PROMPT_SUFFIX"
+}
+ 
+parse_git_dirty () {
+    if [[ $((git status 2> /dev/null) | tail -n1) != "nothing to commit (working directory clean)" ]]; then
+        echo "$GIT_PROMPT_DIRTY"
+    else
+        echo "$GIT_PROMPT_CLEAN"
+    fi
+}
+
+
+# -------------------------------------------------------------------------
+# VIRTUALENV portion of prompt
+# -------------------------------------------------------------------------
+#
+# note - for this to work properly the following should be in a postactivate
+# script:  
+#
+# if [ -n "$_OLD_VIRTUAL_PS1" ] ; then
+#     PS1="$_OLD_VIRTUAL_PS1"
+#     export PS1 
+#     unset _OLD_VIRTUAL_PS1
+# fi
+#
+function virtualenv_info {
+    [ "$VIRTUAL_ENV" ] && echo '('`basename $VIRTUAL_ENV`') '
+}
+
+
+# -------------------------------------------------------------------------
+# PROMPT
+# -------------------------------------------------------------------------
+
+BLACK="\[\033[0;30m\]"
+RED="\[\033[0;31m\]"
+GREEN="\[\033[0;32m\]"
+YELLOW="\[\033[0;33m\]"
+BLUE="\[\033[0;34m\]"
+MAGENTA="\[\033[0;35m\]"
+CYAN="\[\033[0;36m\]"
+WHITE="\[\033[0;37m\]"
+RESET="\[\033[0m\]"
+
+# pretty prompt for git
+PS1="${GREEN}\$(virtualenv_info)${RESET}\u@\h:${CYAN}\W${RESET} ${GREEN}\$(git_prompt_info)${RESET} » "
+

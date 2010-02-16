@@ -66,6 +66,11 @@ if test -r "$HOME/bin/virtualenvwrapper_bashrc" ; then
     . "$HOME/bin/virtualenvwrapper_bashrc"
 fi
 
+# git helper functions
+if test -r "$HOME/bin/git_bashrc" ; then
+    . "$HOME/bin/git_bashrc"
+fi
+
 # java & related services and utilities
 if [ "$UNAME" = Darwin ]; then
     export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
@@ -111,7 +116,14 @@ unset dircolors
 # setup the main ls alias if we've established common args
 test -n "$LS_COMMON" &&
     alias ls="command ls $LS_COMMON"
- 
+
+
+# -------------------------------------------------------------------------
+# PROMPT HAWTNESS
+# -------------------------------------------------------------------------
+
+test -r "$HOME/bin/prompt_bashrc" && . $HOME/bin/prompt_bashrc
+
 
 # -------------------------------------------------------------------------
 # CUSTOM ALIASES FUNCTIONS
@@ -134,12 +146,6 @@ function md {
 
     rm /tmp/$now.html
 }
-
-# pretty prompt for git
-function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-PS1="\u@\h:\W \$(parse_git_branch)$ "
 
 # distribute ssh keys
 # from http://github.com/rtomayko/dotfiles/.bashrc
