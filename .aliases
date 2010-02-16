@@ -46,6 +46,9 @@ if [ "$UNAME" = Darwin ]; then
     alias green='SetTerminalStyle green'
     alias white='SetTerminalStyle Basic'
     alias default='SetTerminalStyle Default'
+
+    # RANDOM TERMINAL COLOR
+    alias newcolor='osascript ~/bin/RandomColorTerminal.scpt'
     
     # UTILITIES
     alias bringalltofront='osascript $HOME/bin/bring-all-to-front'
