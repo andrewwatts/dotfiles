@@ -1,0 +1,34 @@
+
+[alias]
+l = log --template '{rev} {desc}\n'
+lf = log --template '{rev} {desc}\n\t{files}\n'
+ll = log --template '{rev} {desc}\n' --limit=20
+
+[extensions]
+bookmarks = 
+#color =
+convert = 
+graphlog =
+mq = 
+pager = 
+rebase = 
+record =
+
+[bookmarks]
+track.current = True
+
+[color]
+status.modified = magenta bold
+status.added = green bold
+status.removed = red bold
+status.deleted = cyan bold
+status.unknown = blue bold
+status.ignored = black bold
+
+[pager]
+pager = LESS
+attend = annotate, cat, diff, export, glog, log, qdiff, l, lf, ll
+
+[ui]
+username = Andrew Watts <andrewwatts@gmail.com>
+editor = vim
