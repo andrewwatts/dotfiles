@@ -21,6 +21,9 @@
     l = log --abbrev-commit --pretty=oneline
     lf = log --abbrev-commit --pretty=oneline --name-only
     ll = log --abbrev-commit --pretty=oneline --max-count=20
+    lm = log --abbrev-commit --pretty=oneline --committer=andrew
+    lfm = log --abbrev-commit --pretty=oneline --name-only --commiter=andrew
+    llm = log --abbrev-commit --pretty=oneline --max-count=20 --committer=andrew
     raw = show --pretty=raw 
     st = status
     ww = log --pretty=format:'%h %ad %s' --date=local
