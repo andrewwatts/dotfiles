@@ -35,19 +35,27 @@ umask 0022
 # PATH & MANPATH
 # -------------------------------------------------------------------------
 
+# usr/local/sbin
+test -d "/usr/local/sbin" && PATH="$PATH:/usr/local/sbin"
+
+# critical homebrew path
+if test -n "$(command -v brew)" ; then
+    PATH="/usr/local/bin:$PATH"
+else
 # critical macports paths
-test -d "/opt/local/bin" && PATH="/opt/local/bin:$PATH"
-test -d "/opt/local/sbin" && PATH="/opt/local/sbin:$PATH"
-test -d "/opt/local/share/man" && MANPATH="/opt/local/share/man:$MANPATH"
+    test -d "/opt/local/bin" && PATH="/opt/local/bin:$PATH"
+    test -d "/opt/local/sbin" && PATH="/opt/local/sbin:$PATH"
+    test -d "/opt/local/share/man" && MANPATH="/opt/local/share/man:$MANPATH"
+fi
 
 # include our custom scripts
 test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
 
-# include mysql executables
+# include mysql executables for custom mysql installation
 test -d "/usr/local/mysql/bin" && PATH="/usr/local/mysql/bin:$PATH"
 test -d "/usr/local/mysql/share/man" && MANPATH="/usr/local/mysql/share/man:$MANPATH"
 
-# include subversion client 
+# include subversion client for custme svn installation
 test -d "/opt/subversion/bin" && PATH="/opt/subversion/bin:$PATH"
 test -d "/opt/subversion/man" && MANPATH="/opt/subversion/man:$MANPATH"
 
@@ -101,6 +109,10 @@ export PAGER MANPAGER
 
 # we always pass these to ls(1)
 LS_COMMON="--color=auto -hBG"
+
+# setup the main ls alias if we've established common args
+test -n "$LS_COMMON" &&
+    alias ls="command ls $LS_COMMON"
  
 # if the dircolors utility is available, set that up to
 dircolors="$(type -P gdircolors dircolors | head -1)"
@@ -112,11 +124,6 @@ test -n "$dircolors" && {
     eval `$dircolors --sh $COLORS`
 }
 unset dircolors
- 
-# setup the main ls alias if we've established common args
-test -n "$LS_COMMON" &&
-    alias ls="command ls $LS_COMMON"
-
 
 # -------------------------------------------------------------------------
 # PROMPT HAWTNESS
