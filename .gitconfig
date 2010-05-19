@@ -28,6 +28,10 @@
     st = status
     ww = log --pretty=format:'%h %ad %s' --date=local
 
+[instaweb]
+    httpd = webrick
+    port = 4321
+
 [apply]
 	whitespace = nowarn
 
