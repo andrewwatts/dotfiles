@@ -68,10 +68,10 @@ PATH=".:$PATH"
 # -------------------------------------------------------------------------
 
 # virtualenv wrapper
-if test -r "$HOME/bin/virtualenvwrapper_bashrc" ; then
+if test -r "/usr/local/bin/virtualenvwrapper.sh" ; then
     test -d "$HOME/.virtualenvs" || mkdir "$HOME/.virtualenvs"
     export WORKON_HOME="$HOME/.virtualenvs"
-    . "$HOME/bin/virtualenvwrapper_bashrc"
+    . "/usr/local/bin/virtualenvwrapper.sh"
 fi
 
 # git helper functions
