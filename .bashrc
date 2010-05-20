@@ -177,6 +177,15 @@ if [ "$UNAME" = Darwin ]; then
             $HOME/bin/SetTerminalStyle default 
         }
     }
+
+    # change the color of a mysql terminal
+    test -r "$HOME/bin/SetTerminalStyle" && {
+        function mysql {
+            $HOME/bin/SetTerminalStyle Ocean
+            /usr/local/bin/mysql "$@"
+            $HOME/bin/SetTerminalStyle default
+        }
+    }
     
 fi
 
