@@ -2,6 +2,9 @@
 	name = Andrew Watts
 	email = andrewwatts@gmail.com
 
+[core]
+    pager = less -FRXS -x4
+
 [color]
     diff = auto
     status = auto
