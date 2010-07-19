@@ -167,7 +167,7 @@ push_ssh_cert(){
 }
 
 # OSX specific functions
-if [ "$UNAME" = Darwin ]; then
+if [ "$UNAME" = Darwin ] && [ "$TERM_PROGRAM" = Apple_Terminal ]; then
     
     # change the color of our ssh'd terminal
     test -r "$HOME/bin/SetTerminalStyle" && {
