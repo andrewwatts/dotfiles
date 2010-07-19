@@ -51,6 +51,9 @@ fi
 # include our custom scripts
 test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
 
+# include our ruby gems
+test -d "$HOME/.gem/ruby/1.8/bin" && PATH="$HOME/.gem/ruby/1.8/bin:$PATH"
+
 # include mysql executables for custom mysql installation
 test -d "/usr/local/mysql/bin" && PATH="/usr/local/mysql/bin:$PATH"
 test -d "/usr/local/mysql/share/man" && MANPATH="/usr/local/mysql/share/man:$MANPATH"
