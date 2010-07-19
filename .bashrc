@@ -198,3 +198,6 @@ fi
 # carbon mountain
 test -r "$HOME/dev/cmtn/bin/commands.sh" && . $HOME/dev/cmtn/bin/commands.sh
 
+# truecar
+test -r "$HOME/dev/tc/bin/commands.sh" && . $HOME/dev/tc/bin/commands.sh
+
