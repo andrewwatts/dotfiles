@@ -41,3 +41,11 @@ set showmatch           " show matching brackes and braces
 set visualbell          " no noise
 
 
+" autocompletion
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompleteTags
+autocmd FileType c set omnifunc=ccomplete#Complete
