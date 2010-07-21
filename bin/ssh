@@ -63,7 +63,7 @@ function set_bg {
 
 on_exit () {
   if [ ! -f /tmp/iTermBG.empty.png ]; then
-    convert -size "$DIMENSIONS" xc:"$BG_COLOR" "/tmp/iTermBG.empty.png"
+    convert -size "$DIMENSIONS" xc:"#101010" "/tmp/iTermBG.empty.png"
   fi
   set_bg "/tmp/iTermBG.empty.png"
   rm "/tmp/iTermBG.$$.png"
