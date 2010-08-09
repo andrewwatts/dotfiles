@@ -42,10 +42,11 @@ if [ "$UNAME" = Darwin ]; then
     # TERMINAL COLORS
     alias blue='SetTerminalStyle Ocean'
     alias black='SetTerminalStyle black'
-    alias red='SetTerminalStyle Red\ Sands'
-    alias green='SetTerminalStyle green'
-    alias white='SetTerminalStyle Basic'
     alias default='SetTerminalStyle Default'
+    alias djangoterm='SetTerminalStyle Django'
+    alias green='SetTerminalStyle green'
+    alias red='SetTerminalStyle Red\ Sands'
+    alias white='SetTerminalStyle Basic'
 
     # RANDOM TERMINAL COLOR
     alias newcolor='osascript ~/bin/RandomColorTerminal.scpt'
