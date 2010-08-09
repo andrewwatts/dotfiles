@@ -112,6 +112,7 @@ export PAGER MANPAGER
 
 # we always pass these to ls(1)
 LS_COMMON="--color=auto -hBG"
+#LS_COMMON="-hBG"
 
 # setup the main ls alias if we've established common args
 test -n "$LS_COMMON" &&
@@ -204,3 +205,8 @@ test -r "$HOME/dev/cmtn/bin/commands.sh" && . $HOME/dev/cmtn/bin/commands.sh
 # truecar
 test -r "$HOME/dev/tc/bin/commands.sh" && . $HOME/dev/tc/bin/commands.sh
 
+# ec2
+test -L "$HOME/dev/ec2" && {
+    export EC2_HOME="$HOME/dev/ec2"
+    PATH="$PATH:$EC2_HOME/bin"
+}
