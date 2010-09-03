@@ -8,6 +8,7 @@ alias l.="ls -d .*"
 alias ll="ls -l"
 alias ll.="ls -ld .*"
 alias mkdir='mkdir -p'
+alias rmpyc='find ./-name *pyc | xargs rm'
 alias sourc='. ~/.bash_profile'
 alias whatismyip='echo `curl -s http://whatismyip.org/`'
 
