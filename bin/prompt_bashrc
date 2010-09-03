@@ -56,5 +56,7 @@ WHITE="\[\033[0;37m\]"
 RESET="\[\033[0m\]"
 
 # pretty prompt for git
-PS1="${GREEN}\$(virtualenv_info)${RESET}\u@\h:${CYAN}\W${RESET} ${GREEN}\$(git_prompt_info)${RESET} » "
+PS1="
+${GREEN}\$(virtualenv_info)${RESET}\u@\h:${CYAN}\W${RESET} ${GREEN}\$(git_prompt_info)${RESET}
+» "
 
