@@ -38,6 +38,8 @@
 [apply]
 	whitespace = nowarn
 
+[push]
+	default = tracking
+
 [diff]
 #    external = "/Users/andrew/dev/shell/git-diff-driver.sh"
-
