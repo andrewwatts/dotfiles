@@ -1,0 +1,3 @@
+[submodule "lib/massh"]
+	path = lib/massh
+	url = http://github.com/massher/massh.git
