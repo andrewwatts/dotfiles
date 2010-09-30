@@ -56,3 +56,9 @@ if [ "$UNAME" = Darwin ]; then
     alias bringalltofront='osascript $HOME/bin/bring-all-to-front'
 fi
 
+
+# --------------------------------------------------------------------------
+# Development Utilities
+# --------------------------------------------------------------------------
+alias jsontool='python -m json.tool'
+alias xmltool='python /Users/andrew/bin/xmltool.py'
