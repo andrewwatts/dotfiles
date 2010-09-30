@@ -61,4 +61,4 @@ fi
 # Development Utilities
 # --------------------------------------------------------------------------
 alias jsontool='python -m json.tool'
-alias xmltool='python /Users/andrew/bin/xmltool.py'
+alias xmltool='python $HOME/bin/xmltool.py'
