@@ -38,6 +38,10 @@ set tabstop=4                   " 4 spaces
 filetype plugin indent on 
 
 
+" ignore these file types
+set wildignore=*.o,*~,*.pyc
+
+
 " ignore case, unless uppercase when searching
 set ignorecase
 set smartcase
@@ -79,7 +83,8 @@ set cmdheight=2         "use status bar 2 rows hight
 
 
 " map window splitting
-nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>s <C-w>s<C-w>l
+nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
