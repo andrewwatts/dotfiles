@@ -1,3 +1,7 @@
+
+" This must be first, because it changes other options as side effect
+set nocompatible
+
 " enable syntax highlighting
 syntax on
 
