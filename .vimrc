@@ -39,7 +39,7 @@ filetype plugin indent on
 
 
 " ignore these file types
-set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc,*.pyo
 
 
 " ignore case, unless uppercase when searching
@@ -77,6 +77,7 @@ set mouse=a             " enable mouse use if terminal allows it
 set nobackup
 set noswapfile
 
+
 " status bar stuff
 set laststatus=2        "always have a status line
 set cmdheight=2         "use status bar 2 rows hight
@@ -93,6 +94,17 @@ nnoremap <C-l> <C-w>l
 
 " write a file you forgot to open with sudo privileges
 cmap w!! w !sudo tee % >/dev/null
+
+
+" setup support for ack 
+"function! AckGrep(command)
+"    cexpr system("ack " . a:command)
+"    cw " show quickfix window already
+"endfunction
+"command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
+map <leader>a :Ack<space>
+"set grepprg=ack
+"set grepformat=%f:%l:%m
 
 
 " autocompletion
