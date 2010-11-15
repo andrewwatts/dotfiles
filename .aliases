@@ -10,6 +10,7 @@ alias ll.="ls -ld .*"
 alias mkdir='mkdir -p'
 alias rmpyc='find ./ -name "*.pyc" | xargs rm'
 alias sourc='. ~/.bash_profile'
+alias vi='vim'
 alias whatismyip='echo `curl -s http://whatismyip.org/`'
 
 
