@@ -16,7 +16,9 @@ let mapleader=","
 
 " enable syntax highlighting
 if &t_Co >= 256 || has("gui_running")
-   colorscheme mustang
+   colorscheme molokai
+else
+   colorscheme desert
 endif
 if &t_Co > 2 || has("gui_running")
    " switch syntax highlighting on, when the terminal has colors
@@ -55,10 +57,6 @@ set incsearch
 abbreviate teh the
 
 
-" change the color scheme to something i like
-colors desert
-
-
 " more nifty ux settings
 set ruler               " always show cursor
 set number              " line numbers
@@ -67,11 +65,14 @@ set nostartofline       " don't jump to start of line when scrolling
 set showmatch           " show matching brackes and braces
 set visualbell          " no noise
 set hidden              " allow unwritten changes, by hiding bufferss
-set nowrap              " don't wrap lines
+"set nowrap              " don't wrap lines
 set hlsearch            " highlight search terms
 set title               " change the terminal title
 set mouse=a             " enable mouse use if terminal allows it
-
+"handle long lines
+"set textwidth=79
+"set formatoptions=qrn1
+set colorcolumn=76,116
 
 " avoid backup and swp files
 set nobackup
@@ -103,6 +104,7 @@ cmap w!! w !sudo tee % >/dev/null
 "endfunction
 "command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
 map <leader>a :Ack<space>
+map <leader>at :Ack<space>--django<space>--ignore-dir=lib<space>--ignore-dir=wordpress_blog<space>
 "set grepprg=ack
 "set grepformat=%f:%l:%m
 
