@@ -3,7 +3,7 @@
 --context=1
 --follow
 --group
---all
+#--all
 --smart-case
 --type-set
 django=.bat,.html,.js,.py,.sh,.sql,.wsgi
