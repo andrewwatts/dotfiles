@@ -210,3 +210,11 @@ test -L "$HOME/dev/ec2" && {
     export EC2_HOME="$HOME/dev/ec2"
     PATH="$PATH:$EC2_HOME/bin"
 }
+test -L "$HOME/dev/elb" && {
+    export AWS_ELB_HOME="$HOME/dev/elb"
+    PATH="$PATH:$AWS_ELB_HOME/bin"
+}
+test -L "$HOME/dev/iam" && {
+    export AWS_IAM_HOME="$HOME/dev/iam"
+    PATH="$PATH:$AWS_IAM_HOME/bin"
+}
