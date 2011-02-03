@@ -1,5 +1,8 @@
 # these allow you to use ctrl+left/right arrow keys
 # to jump the cursor over words
+# Note: This only works in Terminal.app not iTerm, in
+# iTerm you need to modify the keyboard shortcuts to 
+# send esc+f and esc+b
 "\e[5C": forward-word
 "\e[5D": backward-word
  
