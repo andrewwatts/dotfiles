@@ -72,7 +72,10 @@ set mouse=a             " enable mouse use if terminal allows it
 "handle long lines
 "set textwidth=79
 "set formatoptions=qrn1
-set colorcolumn=76,116
+
+if version > 730
+    set colorcolumn=76,120
+endif
 
 " avoid backup and swp files
 set nobackup
