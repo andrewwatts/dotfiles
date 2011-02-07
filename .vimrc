@@ -34,10 +34,11 @@ set tabstop=4                   " 4 spaces
 "set autoindent                 " automatic indent new lines
 "set smartindent                
 "set copyindent                  " copy the previous indentation on autoindent
+set paste                       " enable paste mode for copy and paste
 
 
 " enable filetype detection
-filetype plugin indent on 
+filetype plugin on
 
 
 " ignore these file types
