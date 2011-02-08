@@ -1,0 +1,27 @@
+# ~/bin/vb
+#
+# Shortcut to Virtual Box tools for starting and stopping headless VMs
+ 
+# TODO:
+# * Show running VMs and enable stopping
+ 
+VM_DIR="/Users/andrew/Library/VirtualBox/Machines/"
+START_VM="/usr/bin/VBoxHeadless"
+VMS=`ls -1 ${VM_DIR}`
+ 
+# path separators so I can use spaces in filenames
+OLD_IFS=${IFS}; IFS="
+"
+ 
+echo "Choose a non-Windows VM to start:"
+select opt in $VMS ; do
+    # run fil
+    echo "${START_VM}" --startvm "${opt}"
+    "${START_VM}" --startvm "${opt}" &
+    # repair IFS
+    IFS=${OLD_IFS}
+    exit 0
+done
+ 
+IFS=${OLD_IFS}
+exit 1
