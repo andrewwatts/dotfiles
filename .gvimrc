@@ -73,6 +73,7 @@ endfunction
 autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
 autocmd FocusGained * call s:UpdateNERDTree()
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+autocmd BufEnter * NERDTreeMirror
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
