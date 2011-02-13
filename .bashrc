@@ -199,6 +199,9 @@ fi
 # bring in other dev environments
 # -------------------------------------------------------------------------
 
+# django
+test -r "$HOME/bin/django_bash_completion" && . $HOME/bin/django_bash_completion
+
 # carbon mountain
 test -r "$HOME/dev/cmtn/bin/commands.sh" && . $HOME/dev/cmtn/bin/commands.sh
 
