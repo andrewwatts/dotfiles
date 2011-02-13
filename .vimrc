@@ -40,18 +40,20 @@ set paste                       " enable paste mode for copy and paste
 " enable filetype detection
 filetype plugin on
 
+" tab completion
+set wildmode=list:longest,list:full
 
 " ignore these file types
-set wildignore=*.o,*~,*.pyc,*.pyo
+set wildignore=*.o,*~,*.pyc,*.pyo,*.git
 
 
 " ignore case, unless uppercase when searching
 set ignorecase
 set smartcase
-
-
 " show the best match so far as search is typed
 set incsearch
+" highlight search terms
+set hlsearch 
 
 
 " change teh to the
@@ -66,13 +68,15 @@ set nostartofline       " don't jump to start of line when scrolling
 set showmatch           " show matching brackes and braces
 set visualbell          " no noise
 set hidden              " allow unwritten changes, by hiding bufferss
-"set nowrap              " don't wrap lines
-set hlsearch            " highlight search terms
+set nowrap              " don't wrap lines
 set title               " change the terminal title
 set mouse=a             " enable mouse use if terminal allows it
 "handle long lines
 "set textwidth=79
 "set formatoptions=qrn1
+set list listchars=tab:\ \ ,trail:·     " mark trailing whitespace with a ·
+set backspace=indent,eol,start          " allow backspacing over everything in insert mode
+
 
 if version > 730
     set colorcolumn=76,120
@@ -101,6 +105,14 @@ nnoremap <C-l> <C-w>l
 cmap w!! w !sudo tee % >/dev/null
 
 
+" Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
+
+
+
 " setup support for ack 
 "function! AckGrep(command)
 "    cexpr system("ack " . a:command)
@@ -108,9 +120,18 @@ cmap w!! w !sudo tee % >/dev/null
 "endfunction
 "command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
 map <leader>a :Ack<space>
-map <leader>at :Ack<space>--django<space>--ignore-dir=lib<space>--ignore-dir=wordpress_blog<space>
+"map <leader>at :Ack<space>--django<space>--ignore-dir=lib<space>--ignore-dir=wordpress_blog<space>
 "set grepprg=ack
 "set grepformat=%f:%l:%m
+
+
+" NERDTree configuration
+let NERDTreeIgnore=['\.pyc$', '\~$']
+map <Leader>n :NERDTreeToggle<CR>
+ 
+
+" Command-T configuration
+let g:CommandTMaxHeight=20
 
 
 " autocompletion
