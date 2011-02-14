@@ -140,12 +140,20 @@ let g:miniBufExplMapWindowNavVim = 1            " navigate with hjkl
 let g:miniBufExplMapWindowNavArrows = 1         " navigate with arrows
 let g:miniBufExplMapCTabSwitchBufs = 1          " switch buffers with <C-TAB>
 let g:miniBufExplModSelTarget = 1               " force mbe into window w/ nonmodifiable buffer
-
 map <Leader>b :MiniBufExplorer<cr>
 map <leader>bc :CMiniBufExplorer<cr>
 map <Leader>bt :TMiniBufExplorer<cr>
 map <Leader>bu :UMiniBufExplorer<cr>
 
+" TagList Configuration
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'      " location of ctags
+let Tlist_Close_On_Select=0                     " close tlist when tag selected
+let Tlist_Exit_OnlyWindow=1                     " close vim when only tlist is present
+let Tlist_Use_Right_Window=1                    " open on the right side
+let Tlist_Auto_Update=1                         " update to include edits
+let Tlist_Process_File_Always=1                 " process files when taglist window is closed
+map <leader>tlt :TlistToggle<cr>
+map <leader>tlc :TlistClose<cr>
 
 " autocompletion
 autocmd FileType python set omnifunc=pythoncomplete#Complete
