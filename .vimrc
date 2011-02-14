@@ -135,15 +135,15 @@ let g:CommandTMaxHeight=20
 
 " MiniBufExplorer Configuration
 let g:miniBufExplSplitToEdge = 0                " don't force to open on edge of screen
-let g:miniBufExplorerMoreThanOne=1              " always open
+"let g:miniBufExplorerMoreThanOne=1              " always open
 let g:miniBufExplMapWindowNavVim = 1            " navigate with hjkl
 let g:miniBufExplMapWindowNavArrows = 1         " navigate with arrows
 let g:miniBufExplMapCTabSwitchBufs = 1          " switch buffers with <C-TAB>
 let g:miniBufExplModSelTarget = 1               " force mbe into window w/ nonmodifiable buffer
 map <Leader>b :MiniBufExplorer<cr>
-map <leader>bc :CMiniBufExplorer<cr>
-map <Leader>bt :TMiniBufExplorer<cr>
-map <Leader>bu :UMiniBufExplorer<cr>
+map <leader>mbec :CMiniBufExplorer<cr>
+map <Leader>mbet :TMiniBufExplorer<cr>
+map <Leader>mbeu :UMiniBufExplorer<cr>
 
 " TagList Configuration
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'      " location of ctags
