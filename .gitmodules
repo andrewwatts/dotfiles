@@ -22,6 +22,3 @@
 [submodule ".vim/bundle/minibufexpl.vim"]
 	path = .vim/bundle/minibufexpl.vim
 	url = https://github.com/vim-scripts/minibufexpl.vim.git
-[submodule ".vim/bundle/Command-T"]
-	path = .vim/bundle/Command-T
-	url = git://github.com/vim-scripts/Command-T.git
