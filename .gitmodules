@@ -13,8 +13,8 @@
 [submodule ".vim/bundle/nerdcommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "/Users/andrew/.vim/bundle/ack.vim"]
-	path = /Users/andrew/.vim/bundle/ack.vim
+[submodule ".vim/bundle/ack.vim"]
+	path = .vim/bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
 [submodule ".vim/bundle/taglist.vim"]
 	path = .vim/bundle/taglist.vim
