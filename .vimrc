@@ -133,6 +133,7 @@ map <Leader>n :NERDTreeToggle<CR>
 " Command-T configuration
 let g:CommandTMaxHeight=20
 
+
 " MiniBufExplorer Configuration
 let g:miniBufExplSplitToEdge = 0                " don't force to open on edge of screen
 "let g:miniBufExplorerMoreThanOne=1              " always open
@@ -144,6 +145,14 @@ map <Leader>b :MiniBufExplorer<cr>
 map <leader>mbec :CMiniBufExplorer<cr>
 map <Leader>mbet :TMiniBufExplorer<cr>
 map <Leader>mbeu :UMiniBufExplorer<cr>
+if !exists("g:did_minibufexplorer_syntax_inits")
+  let g:did_minibufexplorer_syntax_inits = 1
+  hi def link MBENormal         String
+  hi def link MBEChanged        Keyword
+  hi def link MBEVisibleNormal  Special
+  hi def link MBEVisibleChanged Keyword
+endif
+
 
 " TagList Configuration
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'      " location of ctags
@@ -154,6 +163,7 @@ let Tlist_Auto_Update=1                         " update to include edits
 let Tlist_Process_File_Always=1                 " process files when taglist window is closed
 map <leader>tlt :TlistToggle<cr>
 map <leader>tlc :TlistClose<cr>
+
 
 " autocompletion
 autocmd FileType python set omnifunc=pythoncomplete#Complete
