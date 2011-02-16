@@ -154,6 +154,10 @@ if !exists("g:did_minibufexplorer_syntax_inits")
 endif
 
 
+"Bclose configuration
+map <Leader>bc :Bclose<cr>
+
+
 " TagList Configuration
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'      " location of ctags
 let Tlist_Close_On_Select=0                     " close tlist when tag selected
