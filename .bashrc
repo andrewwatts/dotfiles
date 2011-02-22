@@ -74,6 +74,7 @@ PATH=".:$PATH"
 if test -r "/usr/local/bin/virtualenvwrapper.sh" ; then
     test -d "$HOME/.virtualenvs" || mkdir "$HOME/.virtualenvs"
     export WORKON_HOME="$HOME/.virtualenvs"
+    export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
     . "/usr/local/bin/virtualenvwrapper.sh"
 fi
 
