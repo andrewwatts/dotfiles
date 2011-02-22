@@ -112,7 +112,7 @@ export PAGER MANPAGER
 # -------------------------------------------------------------------------
 
 # we always pass these to ls(1)
-LS_COMMON="--color=auto -hBG"
+LS_COMMON="--color=auto -hB"
 #LS_COMMON="-hBG"
 
 # setup the main ls alias if we've established common args
