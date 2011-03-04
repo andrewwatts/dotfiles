@@ -203,6 +203,9 @@ fi
 # django
 test -r "$HOME/bin/django_bash_completion" && . $HOME/bin/django_bash_completion
 
+# git
+test -r "$HOME/bin/git-completion.bash" && . $HOME/bin/git-completion.bash
+
 # carbon mountain
 test -r "$HOME/dev/cmtn/bin/commands.sh" && . $HOME/dev/cmtn/bin/commands.sh
 
