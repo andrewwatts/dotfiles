@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/pylint.vim"]
 	path = .vim/bundle/pylint.vim
 	url = https://github.com/vim-scripts/pylint.vim.git
+[submodule ".vim/bundle/pyflakes-vim"]
+	path = .vim/bundle/pyflakes-vim
+	url = https://github.com/kevinw/pyflakes-vim.git
