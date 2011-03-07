@@ -137,11 +137,16 @@ let g:CommandTMaxHeight=20
 "Bclose configuration
 map <Leader>bc :Bclose<cr>
 
+
 "BufExplorer
 let g:bufExplorerShowRelativePath=1
 let g:bufExplorerShowTabBuffer=0
 let g:bufExplorerSortBy='fullpath'
 let g:bufExplorerSplitOutPathName=0
+
+
+"Fugitive (ie: git support)
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 
 " TagList Configuration

@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/bufexplorer.zip"]
 	path = .vim/bundle/bufexplorer.zip
 	url = https://github.com/vim-scripts/bufexplorer.zip
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
