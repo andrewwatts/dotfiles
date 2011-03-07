@@ -149,6 +149,10 @@ let g:bufExplorerSplitOutPathName=0
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 
+"Pylint support
+let g:pylint_onwrite=0                "disable checking on every save
+
+
 " TagList Configuration
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'      " location of ctags
 let Tlist_Close_On_Select=0                     " close tlist when tag selected
@@ -162,6 +166,7 @@ map <leader>tlc :TlistClose<cr>
 
 " autocompletion
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python compiler pylint
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
