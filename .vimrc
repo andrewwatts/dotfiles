@@ -134,26 +134,6 @@ map <Leader>n :NERDTreeToggle<CR>
 let g:CommandTMaxHeight=20
 
 
-" MiniBufExplorer Configuration
-let g:miniBufExplSplitToEdge = 0                " don't force to open on edge of screen
-"let g:miniBufExplorerMoreThanOne=1              " always open
-let g:miniBufExplMapWindowNavVim = 1            " navigate with hjkl
-let g:miniBufExplMapWindowNavArrows = 1         " navigate with arrows
-let g:miniBufExplMapCTabSwitchBufs = 1          " switch buffers with <C-TAB>
-let g:miniBufExplModSelTarget = 1               " force mbe into window w/ nonmodifiable buffer
-map <Leader>b :MiniBufExplorer<cr>
-map <leader>mbec :CMiniBufExplorer<cr>
-map <Leader>mbet :TMiniBufExplorer<cr>
-map <Leader>mbeu :UMiniBufExplorer<cr>
-if !exists("g:did_minibufexplorer_syntax_inits")
-  let g:did_minibufexplorer_syntax_inits = 1
-  hi def link MBENormal         String
-  hi def link MBEChanged        Keyword
-  hi def link MBEVisibleNormal  Special
-  hi def link MBEVisibleChanged Keyword
-endif
-
-
 "Bclose configuration
 map <Leader>bc :Bclose<cr>
 
