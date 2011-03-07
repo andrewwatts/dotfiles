@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/AutoComplPop"]
 	path = .vim/bundle/AutoComplPop
 	url = git://github.com/vim-scripts/AutoComplPop.git
+[submodule ".vim/bundle/bufexplorer.zip"]
+	path = .vim/bundle/bufexplorer.zip
+	url = https://github.com/vim-scripts/bufexplorer.zip

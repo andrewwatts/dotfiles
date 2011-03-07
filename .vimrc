@@ -137,6 +137,12 @@ let g:CommandTMaxHeight=20
 "Bclose configuration
 map <Leader>bc :Bclose<cr>
 
+"BufExplorer
+let g:bufExplorerShowRelativePath=1
+let g:bufExplorerShowTabBuffer=0
+let g:bufExplorerSortBy='fullpath'
+let g:bufExplorerSplitOutPathName=0
+
 
 " TagList Configuration
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'      " location of ctags
