@@ -88,6 +88,10 @@ if [ "$UNAME" = Darwin ]; then
     export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 fi
 
+if test -n "$(command -v pylint)" && test -r "$HOME/.pylintrc"; then
+    export PYLINTRC="$HOME/.pylintrc"
+fi
+
 
 # -------------------------------------------------------------------------
 # PAGER & EDITOR
