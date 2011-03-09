@@ -8,4 +8,5 @@
 .sqlite_history
 .viminfo
 .virtualenvs
+.pyc
 
