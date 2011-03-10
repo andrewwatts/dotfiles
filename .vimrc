@@ -164,7 +164,10 @@ map <leader>tlt :TlistToggle<cr>
 map <leader>tlc :TlistClose<cr>
 
 
-" autocompletion
+" highlight all occurences of current word
+autocmd CursorMoved * exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
+
+" autocompletion for languages
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python compiler pylint
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
