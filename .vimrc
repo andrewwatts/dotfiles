@@ -141,7 +141,7 @@ map <Leader>bc :Bclose<cr>
 "BufExplorer
 let g:bufExplorerShowRelativePath=1
 let g:bufExplorerShowTabBuffer=0
-let g:bufExplorerSortBy='fullpath'
+"let g:bufExplorerSortBy='fullpath'
 let g:bufExplorerSplitOutPathName=0
 
 
