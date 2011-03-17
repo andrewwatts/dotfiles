@@ -23,6 +23,7 @@
     ds = diff --stat
     l = log --abbrev-commit --pretty=oneline
     lf = log --abbrev-commit --pretty=oneline --name-only
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     ll = log --abbrev-commit --pretty=oneline --max-count=20
     lm = log --abbrev-commit --pretty=oneline --committer=andrew
     lfm = log --abbrev-commit --pretty=oneline --name-only --commiter=andrew
