@@ -10,7 +10,7 @@ GIT_PROMPT_CLEAN=""
 
 # get the name of the branch we are on
 function git_prompt_info() {
-    ref=$(git symbolic-ref HEAD 2> /dev/null | cut -d/ -f3) || return
+    ref=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/git::\1/') || return
     echo "$GIT_PROMPT_PREFIX$ref$(parse_git_dirty)$GIT_PROMPT_SUFFIX"
 }
  
