@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/pyflakes-vim"]
 	path = .vim/bundle/pyflakes-vim
 	url = https://github.com/kevinw/pyflakes-vim.git
+[submodule ".vim/bundle/supertab.vim"]
+	path = .vim/bundle/supertab.vim
+	url = https://github.com/ervandew/supertab.git
