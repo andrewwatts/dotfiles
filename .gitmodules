@@ -40,3 +40,6 @@
 [submodule ".vim/bundle/supertab.vim"]
 	path = .vim/bundle/supertab.vim
 	url = https://github.com/ervandew/supertab.git
+[submodule ".vim/bundle/rope-omni.vim"]
+	path = .vim/bundle/rope-omni.vim
+	url = https://github.com/rygwdn/rope-omni.git
