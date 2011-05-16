@@ -44,7 +44,8 @@ filetype plugin on
 set wildmode=list:longest,list:full
 
 " ignore these file types
-set wildignore=*.o,*~,*.pyc,*.pyo,*.git
+set wildignore+=*.o,*~,*.pyc,*.pyo,*.git
+set wildignore+=**/.idea/**
 
 
 " ignore case, unless uppercase when searching
@@ -119,7 +120,7 @@ endif
 "    cw " show quickfix window already
 "endfunction
 "command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
-map <leader>a :Ack<space>
+map <leader>a :Ack<space>--ignore-dir=.idea<space>
 "map <leader>at :Ack<space>--django<space>--ignore-dir=lib<space>--ignore-dir=wordpress_blog<space>
 "set grepprg=ack
 "set grepformat=%f:%l:%m
