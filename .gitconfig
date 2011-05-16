@@ -32,6 +32,7 @@
     raw = show --pretty=raw 
     st = status
     ww = log --pretty=format:'%h %ad %s' --date=local
+    wwv = log --pretty=format:'%h %ad %s (%an)' --date=iso
 
 [instaweb]
     httpd = webrick
