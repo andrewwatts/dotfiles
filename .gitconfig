@@ -4,6 +4,7 @@
 
 [core]
     pager = less -FRXS -x4
+    whitespace=fix,-indent-with-non-tab,space-before-tab,trailing-space,cr-at-eol
 
 [color]
     diff = auto
