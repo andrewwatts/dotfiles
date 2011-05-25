@@ -24,6 +24,9 @@ if &t_Co > 2 || has("gui_running")
    " switch syntax highlighting on, when the terminal has colors
    syntax on
 endif
+if has("gui_running")
+    set mouse=a             " enable mouse use if terminal allows it
+endif
 
 
 " setup correct spacing and tab widths
@@ -71,7 +74,6 @@ set visualbell          " no noise
 set hidden              " allow unwritten changes, by hiding bufferss
 set nowrap              " don't wrap lines
 set title               " change the terminal title
-set mouse=a             " enable mouse use if terminal allows it
 "handle long lines
 "set textwidth=79
 "set formatoptions=qrn1
