@@ -41,6 +41,8 @@ set paste                       " enable paste mode for copy and paste
 
 
 " enable filetype detection
+filetype on
+filetype indent on
 filetype plugin on
 
 " tab completion
@@ -179,6 +181,7 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompleteTags
 autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType ruby set omnifunc=rubycomplete#Complete
 
 
 " bring in a virtualenv .vimrc
