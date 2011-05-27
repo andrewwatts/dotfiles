@@ -29,8 +29,20 @@ alias gb='git branch -a -v'
 alias gc='git checkout'
 alias gco='git commit'
 alias gd='git diff'
+alias gl='git l'
+alias glo='git log'
+alias gm='git merge'
+alias gp='git pull'
+alias gpp='git pull --rebase && git push'
 alias gs='git status'
 
+
+# --------------------------------------------------------------------------
+# DJANGO ALIASES
+# --------------------------------------------------------------------------
+alias dm='manage.py'
+alias dr='manage.py runserver'
+alias ds='manage.py shell'
 
 # --------------------------------------------------------------------------
 # OSX
