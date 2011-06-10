@@ -26,8 +26,8 @@ test -r "$HOME/amazon/s3/s3sync/s3sync.rb" &&
 # --------------------------------------------------------------------------
 alias ga='git add'
 alias gb='git branch -a -v'
-alias gc='git checkout'
-alias gco='git commit'
+alias gco='git checkout'
+alias gci='git commit'
 alias gd='git diff'
 alias gl='git l'
 alias glo='git log'
@@ -40,9 +40,10 @@ alias gs='git status'
 # --------------------------------------------------------------------------
 # DJANGO ALIASES
 # --------------------------------------------------------------------------
-alias dm='manage.py'
-alias dr='manage.py runserver'
-alias ds='manage.py shell'
+alias djm='manage.py'
+alias djr='manage.py runserver'
+alias djs='manage.py shell'
+alias djt='manage.py test'
 
 # --------------------------------------------------------------------------
 # OSX
