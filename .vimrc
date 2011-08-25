@@ -16,7 +16,7 @@ let mapleader=","
 
 " enable syntax highlighting
 if &t_Co >= 256 || has("gui_running")
-   colorscheme solarized
+   colorscheme Tomorrow-Night-Bright
 else
    colorscheme desert
 endif
