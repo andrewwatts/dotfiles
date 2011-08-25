@@ -79,9 +79,9 @@ if test -r "/usr/local/bin/virtualenvwrapper.sh" ; then
 fi
 
 # git helper functions
-if test -r "$HOME/bin/git_bashrc" ; then
-    . "$HOME/bin/git_bashrc"
-fi
+#if test -r "$HOME/bin/git_bashrc" ; then
+#    . "$HOME/bin/git_bashrc"
+#fi
 
 # java & related services and utilities
 if [ "$UNAME" = Darwin ]; then
@@ -208,7 +208,8 @@ fi
 test -r "$HOME/bin/django_bash_completion" && . $HOME/bin/django_bash_completion
 
 # git
-test -r "$HOME/bin/git-completion.bash" && . $HOME/bin/git-completion.bash
+#test -r "$HOME/bin/git-completion.bash" && . $HOME/bin/git-completion.bash
+test -r "/usr/local/etc/git_completion.d" && . /usr/local/etc/git_completion.d
 
 # carbon mountain
 test -r "$HOME/dev/cmtn/bin/commands.sh" && . $HOME/dev/cmtn/bin/commands.sh

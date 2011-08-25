@@ -31,6 +31,7 @@
     llm = log --abbrev-commit --pretty=oneline --max-count=20 --committer=andrew
     raw = show --pretty=raw 
     st = status
+    wd = diff --color-words
     ww = log --pretty=format:'%h %ad %s' --date=local
     wwv = log --pretty=format:'%h %ad %s (%an)' --date=iso
 
