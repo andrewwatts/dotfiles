@@ -13,6 +13,8 @@ mq =
 pager = 
 rebase = 
 record =
+hgext.bookmarks=
+hggit =
 
 [bookmarks]
 track.current = True
