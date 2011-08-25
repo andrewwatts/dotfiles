@@ -92,6 +92,7 @@ if test -n "$(command -v pylint)" && test -r "$HOME/.pylintrc"; then
     export PYLINTRC="$HOME/.pylintrc"
 fi
 
+export ARCHFLAGS="-arch x86_64"
 
 # -------------------------------------------------------------------------
 # PAGER & EDITOR
