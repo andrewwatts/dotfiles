@@ -4,7 +4,7 @@
 # --------------------------------------------------------------------------
 alias aliases='vi ~/.aliases && source ~/.aliases'
 alias bashrc='vi ~/.bashrc && source ~/.bashrc'
-alias ipython='ipython -automagic -nobanner'
+alias ipython='ipython --automagic --no-banner --deep-reload --term-title --no-confirm-exit --classic --pprint --color-info --quick'
 alias l.="ls -d .*"
 alias ll="ls -l"
 alias ll.="ls -ld .*"
