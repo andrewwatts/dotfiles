@@ -210,7 +210,11 @@ test -r "$HOME/bin/django_bash_completion" && . $HOME/bin/django_bash_completion
 
 # git
 #test -r "$HOME/bin/git-completion.bash" && . $HOME/bin/git-completion.bash
-test -r "/usr/local/etc/git_completion.d" && . /usr/local/etc/git_completion.d
+test -r "/usr/local/etc/bash_completion.d/git-completion.bash" && . /usr/local/etc/bash_completion.d/git-completion.bash
+
+# ssh 
+SSH_COMPLETE=( $(cat ~/.ssh/known_hosts | sed -e 's/ .*//g' -e 's/,.*//g' |  uniq | egrep -v "^([0-9]{1,3}.){4}$") )
+complete -o default -W "${SSH_COMPLETE[*]}" ssh
 
 # carbon mountain
 test -r "$HOME/dev/cmtn/bin/commands.sh" && . $HOME/dev/cmtn/bin/commands.sh
