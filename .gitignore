@@ -1,12 +1,21 @@
-
 .DS_Store
+
+.bash_history
+.codeintel
+.ipython
 .irb_history
 .lesshst
 .mysql_history
-.bash_history
 .sh_history
 .sqlite_history
-.viminfo
-.virtualenvs
+.p4*
+.pdsh
 .pyc
+.pythonhist
+.scss-history
+.viminfo*
+.virtualenvs
+
+*.rdb
+bin/subl
 
