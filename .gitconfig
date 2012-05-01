@@ -32,8 +32,8 @@
     raw = show --pretty=raw 
     st = status
     wd = diff --color-words
-    ww = log --pretty=format:'%h %ad %s' --date=local
-    wwv = log --pretty=format:'%h %ad %s (%an)' --date=iso
+    ww = log --pretty=format:'%h %ad %s' --date=local --reverse
+    wwv = log --pretty=format:'%h %ad %s (%ae)' --date=short --reverse
 
 [instaweb]
     httpd = webrick
